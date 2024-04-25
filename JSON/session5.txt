@@ -1,0 +1,140 @@
+1.Create your own resume in JSON format
+{
+  "basics": {
+    "name": "premiha s",
+    "label": "Programmer",
+    "email": "premihasuresh28@gmail.com",
+    "phone": "9488928189",
+    "summary": "A summary of the resume",
+    "location": {
+      "address": "24-Mullai Nagar,Ammapalayam",
+      "postalCode": "641654",
+      "city": "Tirupur",
+      "region": "Hindhu"
+    },
+  
+  "education": [{
+    "institution": " Bharathiar University",
+    "area": "Information Technology",
+    "studyType": "Bachelor",
+    "startDate": "2021-06-01",
+    "endDate": "2024-05-01",
+    "score": "78.45",
+    "courses": [
+    
+    ]
+  }],
+ 
+  
+  "skills": [{
+    "name": "Programmer",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript,"
+      "python",
+      "MS Word",
+
+    ]
+  }],
+  "languages": [{
+    "language": "English",
+    "fluency": "Native speaker"
+  }],
+  "interests": [{
+    "name": "learning different computer language",
+   
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [{
+    "name": "Deep learning Based-real Time virtual mouse System using computer vision ",
+    "startDate": "2023-01-01",
+    "endDate": "2024-04-01",
+    ],
+    
+  }]
+}
+
+2. For the given JSON iterate over all for loops [taken rest countries API]
+ 
+ forin
+ 
+const xhr=new XMLHttpRequest()
+
+xhr.open("GET","https://restcountries.com/v3.1/all",true)
+xhr.send()
+xhr.onload=function()
+{
+     var data=JSON.parse(this.response)
+    console.log(data)
+     
+    
+for(var k in data){
+    const result =data[k].name.common
+    const result1=data[k].region
+    const result2=data[k].subregion
+    const result3=data[k].population
+    console.log(result,result1,result2,result3)
+}
+}
+
+
+foreach
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all")
+
+xhr.send()
+
+xhr.onload=function foreach()
+{
+    var res=JSON.parse(this.response)
+    console.log(res)
+
+    res.forEach((op)=>
+    
+    {
+    console.log(op.region,op.population)
+    
+    }
+     )}
+
+forloop
+
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all",true)
+
+xhr.send()
+
+xhr.onload=function forloop(){
+
+    var res=JSON.parse(this.response)
+    console.log(res)
+    for(let i=0;i<res.length;i++)
+    {
+        let op=res[i].population
+        console.log(i,op)
+    }
+}
+
+forof
+
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all",true)
+
+xhr.send()
+xhr.onload= function forof()
+{
+    var res=JSON.parse(this.response)
+    console.log(res)
+     for (let j of res )
+     {
+        console.log(res[j].continents)
+     }
+}
